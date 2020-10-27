@@ -1,0 +1,8 @@
+server:
+  # 配置端口号
+  port: 8086
+  servlet:
+    # 配置项目访问路径
+    context-path: /base
+
+
