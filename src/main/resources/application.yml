@@ -1,8 +1,8 @@
 server:
-  # ÅäÖÃ¶Ë¿ÚºÅ
+  # é¡¹ç›®ç«¯å£å·
   port: 8086
   servlet:
-    # ÅäÖÃÏîÄ¿·ÃÎÊÂ·¾¶
+    # é¡¹ç›®è®¿é—®è·¯å¾„
     context-path: /base
 spring:
   datasource:

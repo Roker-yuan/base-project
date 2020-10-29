@@ -20,6 +20,11 @@
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <velocity.version>2.2</velocity.version>
         <freemarker.version>2.3.30</freemarker.version>
+        <!--json-->
+        <fastjson.version>1.2.70</fastjson.version>
+        <jackson.version>2.11.0</jackson.version>
+        <httpmime.version>4.5.12</httpmime.version>
+        <common-collection.version>3.2.2</common-collection.version>
     </properties>
 
     <dependencies>
@@ -44,6 +49,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--  aop 启动器  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>2.2.8.RELEASE</version>
         </dependency>
 
         <!-- mysql 驱动 -->
@@ -113,6 +125,49 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <version>${freemarker.version}</version>
+        </dependency>
+
+        <!-- json相关 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!-- json end -->
+        <!-- http相关 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpmime.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${common-collection.version}</version>
+        </dependency>
+
+        <!-- 解析 UserAgent 信息 -->
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+            <version>1.21</version>
         </dependency>
     </dependencies>
 
