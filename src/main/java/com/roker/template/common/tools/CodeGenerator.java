@@ -20,6 +20,11 @@ import java.util.Scanner;
  * @Date 2020/10/27 15:48
  * @Title CodeGenerator
  * @Description 代码生成器
+ *
+ * 使用说明：配置好 数据库链接地址、驱动、用户名、密码、作者、父包名 的相关信息
+ * 启动 main 方法，
+ * 手动输入预创建的模块名
+ * 然后输入数据库表名（注：数据库表名必须数据库中存在，不存在只生成目录，不生成文件）
  */
 @Data
 public class CodeGenerator {

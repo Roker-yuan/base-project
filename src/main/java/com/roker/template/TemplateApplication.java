@@ -7,7 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @SpringBootApplication
-@MapperScan("com.roker.template.Mapper")
+@MapperScan({"com.roker.template.Mapper","com.roker.template.codeGeneratorDir.*.mapper"})
 public class TemplateApplication {
 
     public static void main(String[] args) {
