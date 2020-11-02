@@ -1,5 +1,6 @@
 package com.roker.template.common.utils.dataUtil;
 
+import com.roker.template.common.enums.BusinessEnum;
 import com.roker.template.common.enums.HttpEnum;
 import lombok.Data;
 import lombok.Getter;
@@ -78,6 +79,10 @@ public class ResponseData<T> implements Serializable {
     }
 
     public static <T> ResponseData<T> failed(HttpEnum enumCode) {
+        return restResult(null,enumCode.code(),enumCode.desc());
+    }
+
+    public static <T> ResponseData<T> failed(BusinessEnum enumCode) {
         return restResult(null,enumCode.code(),enumCode.desc());
     }
 

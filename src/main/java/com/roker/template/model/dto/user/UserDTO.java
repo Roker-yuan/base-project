@@ -1,8 +1,11 @@
 package com.roker.template.model.dto.user;
 
+import com.roker.template.model.dto.BaseDTO;
+import com.roker.template.model.entity.User;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.beans.BeanUtils;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Email;
@@ -20,7 +23,7 @@ import java.util.Date;
  */
 
 @Data
-public class UserDTO {
+public class UserDTO extends BaseDTO {
 
 
     /**
@@ -63,4 +66,18 @@ public class UserDTO {
     @ApiModelProperty("邮箱")
     @Email(message = "邮箱格式有误")
     private String email;
+
+    /**
+     * 通过 DTO 获取具体实体类实例
+     *
+     * @return T
+     */
+    @Override
+    public User buildEntity() {
+        User user = new User();
+        BeanUtils.copyProperties(this,user);
+        return user;
+    }
+
+
 }
