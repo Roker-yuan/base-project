@@ -1,6 +1,9 @@
 package com.roker.template.service;
 
 import com.roker.template.model.dto.user.UserDTO;
+import com.roker.template.model.vo.UserVO;
+
+import java.util.List;
 
 
 public interface IUserService {
@@ -18,4 +21,6 @@ public interface IUserService {
      * @return
      */
     Boolean delUser(String id);
+
+    List<UserVO> listUser();
 }

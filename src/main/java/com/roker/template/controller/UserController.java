@@ -6,6 +6,8 @@ import com.roker.template.model.dto.user.UserDTO;
 import com.roker.template.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -56,7 +58,20 @@ public class UserController {
         }else {
             return ResponseData.failed(BusinessEnum.USER_INFO_DELETE_FAIL);
         }
+    }
 
+    /**
+     * 获取用户列表
+     * @param listUserForm 表单数据
+     * @return 用户列表
+     */
+    @ApiOperation("获取用户列表")
+    @GetMapping("/listUser")
+//    @ApiResponses(
+//            @ApiResponse(code = 200, message = "操作成功", response = UserVo.class)
+//    )
+    public ResponseData listUser(){
+        return ResponseData.ok(userService.listUser());
     }
 
 }
