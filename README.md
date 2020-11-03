@@ -8,7 +8,7 @@
 
 [![spring-boot](https://img.shields.io/badge/spring--boot-2.3.4.RELEASE-green.svg)]()
 
-[![Swagger](https://img.shields.io/badge/mybatis--plus-3.4.0-blue.svg)](https://baomidou.com/)
+[![mybatis--plus](https://img.shields.io/badge/mybatis--plus-3.4.0-blue.svg)](https://baomidou.com/)
 
 
 
